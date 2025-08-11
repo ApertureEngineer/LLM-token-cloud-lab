@@ -8,6 +8,10 @@ Utilities for analysing tokenisation and generating token clouds from locally ho
 * **Token clouds** – Produce frequency maps of generated tokens as a basis for visualisations.
 * **Ollama client** – Lightweight wrapper around the OLLAMA HTTP API.
 
+## Prerequisites
+
+A local OLLAMA server must be installed and running before using `ollama_client.py` or `token_cloud.py`.
+
 ## Requirements
 
 Install the Python dependencies:
