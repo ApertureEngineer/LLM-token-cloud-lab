@@ -5,7 +5,6 @@ Utilities for experimenting with locally hosted LLMs via the [OLLAMA](https://gi
 ## Features
 
 * **Ollama client** – Lightweight wrapper around the OLLAMA HTTP API.
-* **Model conversations** – Script for making two models talk to each other.
 * **Token analysis** – Inspect the token indices and counts for arbitrary text using the `tiktoken` library.
 * **Token clouds** – Produce frequency maps of generated tokens as a basis for visualisations.
 
@@ -19,11 +18,6 @@ pip install -r requirements.txt
 
 ## Examples
 
-### Make two models converse
-
-```bash
-python conversation.py "Hello there" --model-a llama2 --model-b mistral --turns 4
-```
 
 ### Inspect tokens
 
