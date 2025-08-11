@@ -15,6 +15,11 @@ Install the Python dependencies:
 ```bash
 pip install -r requirements.txt
 ```
+This project is tested with:
+
+- requests==2.32.4
+- tiktoken==0.11.0
+
 
 ## Examples
 
