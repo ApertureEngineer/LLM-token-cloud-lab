@@ -7,6 +7,7 @@ Utilities for experimenting with locally hosted LLMs via the [OLLAMA](https://gi
 * **Ollama client** – Lightweight wrapper around the OLLAMA HTTP API.
 * **Model conversations** – Script for making two models talk to each other.
 * **Token analysis** – Inspect the token indices and counts for arbitrary text using the `tiktoken` library.
+* **Token clouds** – Produce frequency maps of generated tokens as a basis for visualisations.
 
 ## Requirements
 
@@ -32,6 +33,15 @@ from token_analysis import TokenAnalyzer
 analyzer = TokenAnalyzer()
 print(analyzer.encode("Hello world"))
 print(analyzer.token_index("hello"))
+```
+
+### Analyse model token usage
+
+```python
+from token_cloud import analyze_model_tokens
+
+counts = analyze_model_tokens("llama2", "Hello there")
+print(counts)
 ```
 
 The repository also contains unit tests which can be executed with:

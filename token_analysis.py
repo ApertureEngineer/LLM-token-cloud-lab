@@ -25,8 +25,13 @@ class TokenAnalyzer:
     def __init__(self, encoding_name: str = "cl100k_base") -> None:
         self.encoding_name = encoding_name
         if tiktoken is not None:
-            self.encoding = tiktoken.get_encoding(encoding_name)
-            self._vocab: dict[str, int] | None = None
+            try:
+                self.encoding = tiktoken.get_encoding(encoding_name)
+                self._vocab: dict[str, int] | None = None
+            except Exception:  # pragma: no cover - fallback if encoding download fails
+                self.encoding = None
+                self._vocab = {}
+                self._next_index = 0
         else:  # pragma: no cover - minimal fallback for missing dependency
             self.encoding = None
             self._vocab = {}
