@@ -1,12 +1,12 @@
 # LLM-Analyzer
 
-Utilities for experimenting with locally hosted LLMs via the [OLLAMA](https://github.com/jmorganca/ollama) API and exploring tokenisation behaviour.
+Utilities for analysing tokenisation and generating token clouds from locally hosted LLMs.
 
 ## Features
 
-* **Ollama client** – Lightweight wrapper around the OLLAMA HTTP API.
 * **Token analysis** – Inspect the token indices and counts for arbitrary text using the `tiktoken` library.
 * **Token clouds** – Produce frequency maps of generated tokens as a basis for visualisations.
+* **Ollama client** – Lightweight wrapper around the OLLAMA HTTP API.
 
 ## Requirements
 
